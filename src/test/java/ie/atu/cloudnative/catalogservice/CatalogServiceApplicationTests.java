@@ -48,7 +48,7 @@ class CatalogServiceApplicationTests {
                 // Validates the returned book matches the expected book's ISBN
                 .expectBody(Book.class).value(actualBook -> {
                 //     assertThat(actualBook).isNotNull();
-                    assertThat(actualBook).isNull();
+                    assertThat(actualBook).isNotNull();
                     assertThat(actualBook.isbn()).isEqualTo(expectedBook.isbn());
                 });
     }
